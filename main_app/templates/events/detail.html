@@ -21,14 +21,12 @@
       <form action="{% url 'ticket' event.id %}" method="POST">
         {% csrf_token %}
         <div class="stripe-overhaul">
-            
-          <!-- <p>Buy Ticket</p> -->
-        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="{{ key }}"
-          data-description="Buy A Ticket"
-          data-amount="500"
-          data-locale="auto">
-        </script>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="Buy A Ticket"
+            data-amount="500"
+            data-locale="auto">
+          </script>
         </div>
       </form>
     {% else %}
