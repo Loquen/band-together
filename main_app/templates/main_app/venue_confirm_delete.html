@@ -6,7 +6,7 @@
 
   <h4 class="delete-header">Are you sure you want to delete <span class="delete-venue-key">{{ object.name }}</span>?</h4>
 
-  <form action="" method="POST">
+  <form action="" method="POST" class="delete-event-form">
     {% csrf_token %}
     <input type="submit" value="Confirm Delete" class="btn">
     <a href="{% url 'venue_index' %}">Cancel</a>

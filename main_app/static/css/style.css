@@ -385,6 +385,41 @@ input#search.search-bar {
   margin: 3rem auto;
 }
 
+/* delete venue confirmation page */
+.delete-confirmation {
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  height: 100vh;
+  text-align: center;
+}
+
+.delete-confirmation a {
+  color: #00695c;
+  background: #fff;
+  padding: 8px 12px 11px 12px;
+  border-radius: 2px;
+}
+
+.delete-button {
+  color: teal;
+  padding: 9px;
+  border-radius: 3px;
+}
+
+.delete-header {
+  color: #fff;
+  text-shadow: var(--teal-outline);
+
+}
+
+.delete-confirmation-key {
+  color: #a7ffeb;
+}
+
+.delete-confirmation-form {
+  width: fit-content;
+  margin: 3rem auto;
+}
+
 /* ticket profile page */
 .ticket-list {
   text-align: center;
@@ -428,12 +463,26 @@ button.stripe-button-el {
   text-align: center;
   background-size: 100% auto;
   background-repeat: no-repeat;
- 
-
 }
 
 .strip-overhaul:hover {
   background: #2bbbad;
+}
+
+/* signup section */
+.signup {
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  text-align: center;
+}
+
+.formation-signup {
+  width: 60%;
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.formation-signup p {
+  margin-top:0 !important;
 }
 
 /* Media Queries */
