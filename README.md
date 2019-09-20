@@ -25,7 +25,6 @@ Check the site out [here](http://bandtogether-lmj.herokuapp.com/)
 ### Screenshots:
   ![Imgur](https://i.imgur.com/vi2ojEh.png)
   ![Imgur](https://i.imgur.com/fYzZbWi.png)
-  ![Imgur](https://i.imgur.com/6qEURkO.png)
   ![Imgur](https://i.imgur.com/sraSAYL.png)
   ![Imgur](https://i.imgur.com/B70nfgB.png)
   ![Imgur](https://i.imgur.com/q1LykK4.png)
