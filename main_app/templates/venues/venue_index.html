@@ -2,7 +2,7 @@
 {% block content %}
 <section class="venue-list">
 <h1 class="events-header">All Venues</h1>
-<input id="search" type="text" name="query" onkeyup=search(event) placeholder="Search by Name"></input>
+<input class="search-bar" id="search" type="text" name="query" onkeyup=search(event) placeholder="Search by Name"></input>
 
 {% for venue in venue_list %}
   <div class="card">

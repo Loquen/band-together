@@ -50,10 +50,20 @@
     <div>All Rights Reserved, &copy; 2019 bandtogether &nbsp;</div>
   </footer>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">Add an Event</a></li>
-    <li><a href="{% url 'index' %}">View Events</a></li>
-    <li><a href="{% url 'logout' %}">Log Out</a></li>
+  <ul class="sidenav mobile-nav" id="mobile-demo">
+    {% if user.is_authenticated %}
+      {% if user.is_staff %}
+        <li><a href="{% url 'venue_create' %}">Add a Venue</a></li>
+        <li><a href="{% url 'venue_index' %}">View My Venues</a></li>
+        <li><a href="{% url 'create' %}">Add an Event</a></li>
+      {% endif %}
+      <li><a href="{% url 'index' %}">View Events</a></li>
+      <li><a href="{% url 'profile' %}">My Profile</a></li>
+      <li><a href="{% url 'logout' %}">Log Out</a></li>
+    {% else %}
+      <li><a href="{% url 'signup' %}">Sign Up</a></li>
+      <li><a href="{% url 'login' %}">Log In</a></li>
+    {% endif %}
   </ul>
 
   <script>

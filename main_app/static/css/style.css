@@ -3,6 +3,10 @@
   --shade: 0px 4px 3px rgba(0,0,0,0.4),
   0px 8px 13px rgba(0,0,0,0.1),
   0px 18px 23px rgba(0,0,0,0.1);
+  --teal-outline: -1px -1px 0 #00695c,
+  1px -1px 0 #00695c,
+  -1px 1px 0 #00695c,
+  1px 1px 0 #00695c;
 }
 
 /* general app stylings */
@@ -34,15 +38,11 @@ nav {
   top: 50%;
   left: 2%;
   transform: translateY(-25%);
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-            0px 8px 13px rgba(0,0,0,0.1),
-            0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--shade);
 }
 
 .brand-logo.left {
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--shade);
 }
 
 .fa-bars {
@@ -162,13 +162,11 @@ footer  {
 .login-header {
   color: white !important;
   font-size: 30px !important;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-            0px 8px 13px rgba(0,0,0,0.1),
-            0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--shade);
 }
 
 .section-login {
-  height: 100%;
+  height: 100vh;
   background-image: url('https://i.imgur.com/0R2TzR9.jpg');
   background-size: cover;
   width: 100%;
@@ -178,6 +176,18 @@ footer  {
 .login-header {
   margin: 0;
   padding-top: 100px;
+}
+
+.formation-login {
+  padding-bottom: 35px;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.formation-login p {
+  margin-top: -10px;
 }
 
 /* cards and builtins */
@@ -223,6 +233,8 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 /* events listing page */
 .events-listing {
   background-image: url('https://i.imgur.com/0R2TzR9.jpg');
+  height: 100%;
+  min-height: 100vh;
   background-size: cover;
   text-align: center;
   background-attachment: fixed;
@@ -236,11 +248,7 @@ input#search.search-bar {
 .events-header {
   font-size: 42px;
   color: #fff;
-  text-shadow:
-  -1px -1px 0 #00695c,
-  1px -1px 0 #00695c,
-  -1px 1px 0 #00695c,
-  1px 1px 0 #00695c;
+  text-shadow: var(--teal-outline);
   margin: 0;
   padding-top: 50px;
 }
@@ -265,13 +273,13 @@ input#search.search-bar {
 .formation-add table tbody tr th label {
   color: #a7ffeb !important;
   font-size: 22px !important;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--shade);
 }
 
 .formation-add label {
   color: #fff !important;
   font-size: 22px !important;
-  text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(36, 31, 31, 0.1), 0px 18px 23px rgba(0,0,0,0.1);
+  text-shadow: var(--shade);
 }
 
 .formation-add p {
@@ -303,7 +311,6 @@ input#search.search-bar {
   margin-top: 25px;
 }
 
-
 /* add venues page */
 .add-venues input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
   background:#fff;
@@ -317,6 +324,7 @@ input#search.search-bar {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
+  min-height: 100vh;
 }
 
 /* event details page */
@@ -342,6 +350,141 @@ input#search.search-bar {
   text-align: center;
 }
 
+/* delete confirmation page */
+.delete-event {
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  height: 100vh;
+  text-align: center;
+}
+
+.delete-event a {
+  color: #00695c;
+  background: #fff;
+  padding: 8px 12px 11px 12px;
+  border-radius: 2px;
+}
+
+.delete-button {
+  color: teal;
+  padding: 9px;
+  border-radius: 3px;
+}
+
+.delete-header {
+  color: #fff;
+  text-shadow: var(--teal-outline);
+
+}
+
+.delete-venue-key {
+  color: #a7ffeb;
+}
+
+.delete-event-form {
+  width: fit-content;
+  margin: 3rem auto;
+}
+
+/* delete venue confirmation page */
+.delete-confirmation {
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  height: 100vh;
+  text-align: center;
+}
+
+.delete-confirmation a {
+  color: #00695c;
+  background: #fff;
+  padding: 8px 12px 11px 12px;
+  border-radius: 2px;
+}
+
+.delete-button {
+  color: teal;
+  padding: 9px;
+  border-radius: 3px;
+}
+
+.delete-header {
+  color: #fff;
+  text-shadow: var(--teal-outline);
+
+}
+
+.delete-confirmation-key {
+  color: #a7ffeb;
+}
+
+.delete-confirmation-form {
+  width: fit-content;
+  margin: 3rem auto;
+}
+
+/* ticket profile page */
+.ticket-list {
+  text-align: center;
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.ticket-list-item {
+  background: rgba(0,0,0,.75) !important;
+  color: #a7ffeb;
+  padding-top: 20px;
+}
+
+.ticket-display {
+  color: #a7ffeb;
+}
+
+.card-content .ticket-p {
+  color: #a7ffeb;
+}
+
+.card-title-profile {
+  padding-top: 30px;
+}
+
+/* stripe */
+
+button.stripe-button-el {
+  opacity:0 !important;
+}
+
+.stripe-overhaul {
+  width: 70px;
+   background-color: rgb(38, 166, 154);
+  
+   background-image: url('https://i.imgur.com/u3FzXbA.png');
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.strip-overhaul:hover {
+  background: #2bbbad;
+}
+
+/* signup section */
+.signup {
+  background: url('https://i.imgur.com/CZk7ptS.jpg');
+  text-align: center;
+}
+
+.formation-signup {
+  width: 60%;
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.formation-signup p {
+  margin-top:0 !important;
+}
+
 /* Media Queries */
 
 /* 1280px width and down */
@@ -353,6 +496,25 @@ input#search.search-bar {
 
 /* 992px width and down */
 @media only screen and (max-width: 992px) {
+  .mobile-nav {
+    background: #00695c;
+    margin-top: 50%;
+    transform: translateY(-50%);
+    height: fit-content;
+    text-align: center;
+  }
+
+  .sidenav {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    width: 100%;
+  }
+
+  .mobile-nav li a {
+    color: #fff;
+    font-size: 20px;
+  }
+
   .card-det {
     width: 80%;
   }
@@ -385,6 +547,7 @@ input#search.search-bar {
   .events-detail {
     background-size: cover;
   }
+  
 }
 
 /* 601px width and down */
@@ -402,6 +565,19 @@ input#search.search-bar {
 
 /* 480px width and down */
 @media only screen and (max-width: 480px) {
+
+  .events-header {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+
+  .formation-login {
+    width: 90%;
+  }
+
+  .formation-add {
+    width: 80%;
+  }
 
   .statement {
     height: 80vh;
@@ -430,7 +606,6 @@ input#search.search-bar {
   .add-events input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
     background:#fff;
     width: 100%;
-    right: 15px;
   }
 
   .add-events textarea {

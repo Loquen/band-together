@@ -131,3 +131,6 @@ LOGOUT_REDIRECT_URL = '/'
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
+
+STRIPE_SECRET_KEY = 'sk_test_u6K56wlB4H2W3pSLu1QHGJj300ZM3huAaP'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_FIBNuuxsBX0DsU1G4DXIYWWt00cpsWzsQk'
