@@ -7,16 +7,15 @@
 <input class="search-bar" id="search" type="text" name="query" onkeyup=search(event) placeholder="Search by Name"></input>
 
 {% for event in events %}
-<a href="{% url 'detail' event.id %}">
-  <div class="card card-hov card-event">
-    <div class="card-content">
-      <span class="card-title">{{ event.artists }}</span>
-      <p>Date: {{ event.date }}</p>
-      <p>Venue: {{ event.venue.name }}</p>
+  <a href="{% url 'detail' event.id %}">
+    <div class="card card-hov card-event">
+      <div class="card-content">
+        <span class="card-title">{{ event.artists }}</span>
+        <p>Date: {{ event.date }}</p>
+        <p>Venue: {{ event.venue.name }}</p>
+      </div>
     </div>
-  </div>
-</a>
-
+  </a>
 {% endfor %}
 </section>
 <script defer>
