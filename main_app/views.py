@@ -8,6 +8,10 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.admin.views.decorators import staff_member_required
 from .models import Venue, Event, Profile, Ticket
 from .forms import EventForm
+from django.conf import settings
+import stripe
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 def home(request):
   return render(request, 'home.html')
@@ -39,7 +43,7 @@ def event_index(request):
 @login_required
 def event_detail(request, event_id):
   event = Event.objects.get(id=event_id)
-  return render(request, 'events/detail.html', { 'event': event })
+  return render(request, 'events/detail.html', { 'event': event, 'key': settings.STRIPE_PUBLISHABLE_KEY })
 
 @staff_member_required
 def event_create(request):
@@ -88,6 +92,12 @@ class VenueDelete(LoginRequiredMixin, DeleteView):
 
 @login_required
 def ticket_create(request, event_id):
+  charge = stripe.Charge.create(
+      amount=500,
+      currency='usd',
+      description='A Ticket',
+      source=request.POST['stripeToken']
+  )
   event = Event.objects.get(id=event_id)
   ticket = Ticket(event=event, user=request.user)
   ticket.save()
