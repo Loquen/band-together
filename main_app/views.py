@@ -93,10 +93,10 @@ class VenueDelete(LoginRequiredMixin, DeleteView):
 @login_required
 def ticket_create(request, event_id):
   charge = stripe.Charge.create(
-      amount=500,
-      currency='usd',
-      description='A Ticket',
-      source=request.POST['stripeToken']
+    amount=500,
+    currency='usd',
+    description='A Ticket',
+    source=request.POST['stripeToken']
   )
   event = Event.objects.get(id=event_id)
   ticket = Ticket(event=event, user=request.user)
