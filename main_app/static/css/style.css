@@ -412,6 +412,30 @@ input#search.search-bar {
   padding-top: 30px;
 }
 
+/* stripe */
+
+button.stripe-button-el {
+  opacity:0 !important;
+}
+
+.stripe-overhaul {
+  width: 70px;
+   background-color: rgb(38, 166, 154);
+  
+   background-image: url('https://i.imgur.com/u3FzXbA.png');
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+ 
+
+}
+
+.strip-overhaul:hover {
+  background: #2bbbad;
+}
+
 /* Media Queries */
 
 /* 1280px width and down */

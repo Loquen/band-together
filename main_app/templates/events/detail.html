@@ -16,15 +16,20 @@
     </div>
   </div>
   <div class="card-action">
+   
     {% if event.total_tickets > 0 %}
       <form action="{% url 'ticket' event.id %}" method="POST">
         {% csrf_token %}
+        <div class="stripe-overhaul">
+            
+          <!-- <p>Buy Ticket</p> -->
         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="{{ key }}"
           data-description="Buy A Ticket"
           data-amount="500"
           data-locale="auto">
         </script>
+        </div>
       </form>
     {% else %}
       <p class="card-title">SOLD OUT!</p>
